@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Pregunta 3 · Elemento animado | PC3 CSS</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⏰%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="base.css"><link rel="stylesheet" href="p3.css"></head>
+<body class="rb">
+<header class="site"><a class="brand" href="index.html"><b>CSS</b> · <i>PC3</i></a><input type="checkbox" id="mn" class="mn-t"><label for="mn" class="burger" aria-label="Abrir menú">☰</label><nav class="menu" aria-label="Principal"><a class="n" href="index.html">Inicio</a><a class="r" href="pregunta1.html">Pregunta 1</a><a class="b" href="pregunta2.html">Pregunta 2</a><a class="r on" href="pregunta3.html">Pregunta 3</a><a class="b" href="pregunta4.html">Pregunta 4</a></nav></header>
+<section class="q rb" id="p3"><div class="in">
+  <div class="orb"></div><div class="orb"></div><div class="orb"></div>
+  <h2>Pregunta 3 · Reloj animado solo con CSS</h2>
+  <p class="lead">Reloj hecho con formas CSS que funciona por sí mismo (sin intervención). Un pequeño script solo lo sincroniza con la hora actual; las animaciones son 100 % CSS.</p>
+  <div class="stage">
+    <div class="clock" id="clock"><div class="ticks"></div><div class="hand h-h"></div><div class="hand h-m"></div><div class="hand h-s"></div><div class="dot"></div></div>
+    <div class="loader" aria-hidden="true"><i></i><i></i><i></i></div>
+    <p class="hint">Extra: al pasar el mouse sobre el reloj, el segundero se acelera.</p>
+  </div>
+</div></section>
+<div class="pager"><a href="pregunta2.html">← Pregunta 2</a><a href="pregunta4.html">Pregunta 4 →</a></div>
+<footer>Práctica Calificada N.º 3 · Docente: Antonio Arroyo Paz · Rodrigo Nicolas Franco Gutierrez (U24244377) · UTP Arequipa · Hecho con apoyo de IA (Claude) autorizado por el docente</footer>
+<script>
+/* Sincroniza el reloj con la hora actual (solo desplaza el inicio de las animaciones CSS) */
+(function(){
+  var d=new Date(),s=d.getSeconds(),m=d.getMinutes()*60+s,h=(d.getHours()%12)*3600+m;
+  var c=document.getElementById('clock');
+  c.querySelector('.h-s').style.animationDelay=-s+'s';
+  c.querySelector('.h-m').style.animationDelay=-m+'s';
+  c.querySelector('.h-h').style.animationDelay=-h+'s';
+})();
+</script>
+</body></html>

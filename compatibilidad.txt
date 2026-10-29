@@ -1,0 +1,13 @@
+Alumno: Rodrigo Nicolas Franco Gutierrez - Codigo U24244377
+COMPATIBILIDAD - Pregunta 4
+Fuentes: caniuse.com y MDN Web Docs
+
+backdrop-filter  : Chrome 76+, Edge 79+, Safari 9+ (-webkit-), Firefox 103+. Fallback: fondo rgba mas oscuro.
+aspect-ratio     : Chrome 88+, Firefox 89+, Safari 15+. Fallback: @supports not + min-height.
+clamp()          : Chrome 79+, Firefox 75+, Safari 13.1+. Fallback: font-size fijo antes.
+@supports        : soportado en todos los navegadores modernos.
+prefers-reduced-motion: Chrome 74+, Firefox 63+, Safari 10.1+.
+
+PRUEBAS PROPIAS (completar con lo que veas al abrir el sitio):
+Navegador 1: Chrome  version ____  Resultado: ____________
+Navegador 2: Firefox version ____  Resultado: ____________

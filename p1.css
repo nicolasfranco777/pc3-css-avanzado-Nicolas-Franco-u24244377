@@ -1,0 +1,21 @@
+.nav{display:flex;gap:.3rem;flex-wrap:wrap;background:#000;border:1px solid var(--a);border-radius:12px;padding:.4rem;margin-bottom:1.5rem}
+.nav a{position:relative;color:var(--text);text-decoration:none;padding:.5rem 1rem;border-radius:8px;transition:background .3s,color .3s,transform .3s}
+.nav a::after{content:"";position:absolute;left:1rem;right:1rem;bottom:.25rem;height:2px;background:var(--a);transform:scaleX(0);transition:transform .3s}
+.nav a:hover{background:#2a0a0d;transform:translateY(-2px)}
+.nav a:hover::after{transform:scaleX(1)}
+.prod{background:var(--panel);border:1px solid #2a2a2a;border-radius:14px;padding:1rem;transition:transform .35s,box-shadow .35s,border-color .35s}
+.prod:hover{transform:translateY(-8px);box-shadow:0 12px 28px #e10a1d55;border-color:var(--a)}
+.prod .ico{font-size:2.4rem;transition:transform .4s}
+.prod:hover .ico{transform:scale(1.25) rotate(-8deg)}
+.prod b{display:block}.prod span{color:var(--muted);font-size:.9rem}
+.btn{margin-top:.6rem;cursor:pointer;border:2px solid var(--a);background:transparent;color:var(--text);padding:.5rem 1.1rem;border-radius:99px;font:inherit;position:relative;overflow:hidden;z-index:0;transition:color .35s,transform .2s}
+.btn::before{content:"";position:absolute;inset:0;background:var(--a);transform:translateX(-101%);transition:transform .35s;z-index:-1}
+.btn:hover::before,.btn:focus-visible::before{transform:translateX(0)}
+.btn:active{transform:scale(.94)}
+form.contact{margin-top:2rem;background:var(--panel);border:1px solid #2a2a2a;border-radius:14px;padding:1.2rem;display:grid;gap:.8rem}
+form.contact h3{margin:0}
+.field{position:relative}
+.field input,.field textarea{width:100%;background:#000;border:2px solid #333;border-radius:10px;color:var(--text);padding:.7rem;font:inherit;transition:border-color .3s,box-shadow .3s}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--a);box-shadow:0 0 0 4px #e10a1d33}
+
+@media (prefers-reduced-motion:reduce){.prod,.btn::before,.nav a,.card .inner,.menu a,.hcard{transition:none!important}}

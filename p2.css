@@ -1,0 +1,13 @@
+.card{perspective:900px;height:220px;cursor:pointer}
+.card .face{position:absolute;inset:0;border-radius:16px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1rem;transition:transform .7s}
+.card .inner{position:relative;height:100%;transform-style:preserve-3d;transition:transform .7s}
+.card:hover .inner,.card:focus-within .inner{transform:rotateY(180deg)}
+.card .front{background:linear-gradient(145deg,#0b2b6b,#000);border:1px solid var(--a)}
+.card .front .e{font-size:3.2rem;transition:transform .5s}
+.card:hover .front .e{transform:scale(1.2)}
+.card .back{background:var(--a);color:#000;transform:rotateY(180deg)}
+.card .back p{margin:.4rem 0 0;font-size:.9rem}
+.card .back b{font-size:1.1rem}
+.card .front small{color:var(--muted)}
+
+@media (prefers-reduced-motion:reduce){.prod,.btn::before,.nav a,.card .inner,.menu a,.hcard{transition:none!important}}

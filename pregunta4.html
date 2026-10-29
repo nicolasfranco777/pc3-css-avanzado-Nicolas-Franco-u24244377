@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Pregunta 4 · Glassmorphism y @supports | PC3 CSS</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🪟%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="base.css"><link rel="stylesheet" href="p4.css"></head>
+<body class="bb">
+<header class="site"><a class="brand" href="index.html"><b>CSS</b> · <i>PC3</i></a><input type="checkbox" id="mn" class="mn-t"><label for="mn" class="burger" aria-label="Abrir menú">☰</label><nav class="menu" aria-label="Principal"><a class="n" href="index.html">Inicio</a><a class="r" href="pregunta1.html">Pregunta 1</a><a class="b" href="pregunta2.html">Pregunta 2</a><a class="r" href="pregunta3.html">Pregunta 3</a><a class="b on" href="pregunta4.html">Pregunta 4</a></nav></header>
+<section class="q bb" id="p4"><div class="in">
+  <h2>Pregunta 4 · Glassmorphism con @supports y fallbacks</h2>
+  <p class="lead">Paneles de vidrio (backdrop-filter) con alternativa si el navegador no lo soporta, valores de reserva, prefijos y respeto a prefers-reduced-motion.</p>
+  <div class="glass-wrap"><div class="grid">
+    <div class="glass"><h3>Perfil</h3><p>Rodrigo Nicolas Franco Gutierrez<br>Código U24244377</p></div>
+    <div class="glass"><h3>Cursos</h3><p>CSS, HTML y JavaScript. Ciclo 2026-II.</p></div>
+    <div class="glass"><h3>Contacto</h3><p>Arequipa, Perú</p></div>
+  </div></div>
+  <table>
+    <tr><th>Propiedad / regla</th><th>Uso</th><th>Soporte (según caniuse.com / MDN)</th><th>Si no se soporta</th></tr>
+    <tr><td>backdrop-filter</td><td>Efecto vidrio</td><td class="ok">Chrome 76+, Edge 79+, Safari 9+ (con -webkit-), Firefox 103+</td><td>Fondo semitransparente más oscuro (fallback)</td></tr>
+    <tr><td>aspect-ratio</td><td>Proporción 4/3</td><td class="ok">Chrome 88+, Firefox 89+, Safari 15+</td><td>@supports not → min-height</td></tr>
+    <tr><td>clamp()</td><td>Tipografía fluida</td><td class="ok">Chrome 79+, Firefox 75+, Safari 13.1+</td><td>font-size fijo declarado antes</td></tr>
+    <tr><td>@supports</td><td>Detección de funciones</td><td class="ok">Prácticamente todos los navegadores modernos</td><td>Se ignora el bloque (queda el fallback)</td></tr>
+    <tr><td>prefers-reduced-motion</td><td>Reduce animaciones</td><td class="ok">Chrome 74+, Firefox 63+, Safari 10.1+</td><td>Se muestran animaciones normales</td></tr>
+  </table>
+  <p class="lead" style="margin-top:.8rem">Pruebas hechas en Chrome y Firefox (escritorio); datos de compatibilidad consultados en caniuse.com y MDN.</p>
+</div></section>
+<div class="pager"><a href="pregunta3.html">← Pregunta 3</a><a href="index.html">Inicio ↺</a></div>
+<footer>Práctica Calificada N.º 3 · Docente: Antonio Arroyo Paz · Rodrigo Nicolas Franco Gutierrez (U24244377) · UTP Arequipa · Hecho con apoyo de IA (Claude) autorizado por el docente</footer>
+</body></html>

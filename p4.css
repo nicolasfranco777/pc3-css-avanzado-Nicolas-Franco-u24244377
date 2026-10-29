@@ -1,0 +1,24 @@
+.glass-wrap{position:relative;padding:2rem 1rem;border-radius:18px;background:
+  radial-gradient(circle at 20% 20%,#1e6bff 0,transparent 40%),
+  radial-gradient(circle at 80% 70%,#0a3fb5 0,transparent 45%),#000}
+.glass{background:rgba(20,30,60,.9);                    /* fallback: color sólido */
+  border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:1.2rem;
+  font-size:1.1rem;                                      /* fallback de clamp() */
+  font-size:clamp(1rem,2.2vw,1.25rem);                   /* estándar al final */
+  aspect-ratio:4/3}
+@supports ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+  .glass{background:rgba(255,255,255,.08);
+    -webkit-backdrop-filter:blur(14px) saturate(160%);   /* prefijo de proveedor */
+    backdrop-filter:blur(14px) saturate(160%)}           /* estándar al final */
+}
+@supports not (aspect-ratio:1){.glass{min-height:170px}}
+.glass{transition:transform .5s,box-shadow .5s;animation:drift 6s ease-in-out infinite}
+.glass:nth-child(2){animation-delay:-2s}.glass:nth-child(3){animation-delay:-4s}
+.glass:hover{transform:translateY(-6px) scale(1.03);box-shadow:0 10px 30px #1e6bff77}
+@keyframes drift{50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion:reduce){.glass{animation:none;transition:none}.glass:hover{transform:none}}
+.glass h3{margin:.2rem 0}.glass p{margin:0;color:#dbe6ff;font-size:.9em}
+table{width:100%;border-collapse:collapse;margin-top:1.5rem;font-size:.9rem;display:block;overflow-x:auto}
+th,td{border:1px solid #2b3a5a;padding:.5rem .7rem;text-align:left}
+th{background:#0b2b6b}
+td.ok{color:#6fd98a}td.pre{color:#ffcf5c}

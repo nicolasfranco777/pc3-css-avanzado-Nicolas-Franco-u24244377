@@ -1,0 +1,23 @@
+.orb{position:absolute;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--a),#400);opacity:.35;animation:float 9s ease-in-out infinite}
+.orb:nth-child(1){width:120px;height:120px;left:8%;top:12%}
+.orb:nth-child(2){width:70px;height:70px;right:12%;top:30%;animation-duration:6s;animation-delay:-2s}
+.orb:nth-child(3){width:180px;height:180px;left:60%;bottom:-40px;animation-duration:12s;animation-delay:-5s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(20px,-35px) scale(1.15)}}
+.stage{display:flex;flex-direction:column;align-items:center;gap:1rem}
+.clock{position:relative;width:min(260px,70vw);aspect-ratio:1;border-radius:50%;background:#000;border:6px solid var(--a);box-shadow:0 0 40px #e10a1d66,inset 0 0 30px #e10a1d33;animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 70px #e10a1daa,inset 0 0 30px #e10a1d55}}
+.clock .ticks{position:absolute;inset:6px;border-radius:50%;background:repeating-conic-gradient(var(--text) 0 1.5deg,transparent 1.5deg 30deg);-webkit-mask:radial-gradient(circle,transparent 84%,#000 85%);mask:radial-gradient(circle,transparent 84%,#000 85%)}
+.hand{position:absolute;left:50%;bottom:50%;transform-origin:50% 100%;border-radius:4px;animation:spin linear infinite}
+.h-h{width:6px;height:25%;margin-left:-3px;background:var(--text);animation-duration:43200s}
+.h-m{width:4px;height:36%;margin-left:-2px;background:var(--text);animation-duration:3600s}
+.h-s{width:2px;height:42%;margin-left:-1px;background:var(--a);animation-duration:60s;animation-timing-function:steps(60)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.dot{position:absolute;left:50%;top:50%;width:16px;height:16px;margin:-8px;border-radius:50%;background:var(--a)}
+.hint{color:var(--muted);font-size:.9rem;text-align:center}
+.loader{display:flex;gap:8px}
+.loader i{width:14px;height:14px;border-radius:50%;background:var(--a);animation:bounce 1s ease-in-out infinite}
+.loader i:nth-child(2){animation-delay:.15s}.loader i:nth-child(3){animation-delay:.3s}
+@keyframes bounce{0%,80%,100%{transform:translateY(0);opacity:.4}40%{transform:translateY(-18px);opacity:1}}
+.clock:hover .h-s{animation-duration:6s}
+@media (prefers-reduced-motion:reduce){.orb,.clock,.loader i{animation:none}.hand{animation-duration:0s}.card .inner,.prod,.btn::before{transition:none}}
+
